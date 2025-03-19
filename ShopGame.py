@@ -12,20 +12,20 @@ seller = pygame.image.load("seller.png")
 chat = pygame.image.load("chat.png")  # Jutumulli pilt
 
 # Piltide suuruse muutmine
-seller_scaled = pygame.transform.scale(seller, (150, 150))  # Poemüüja väiksemaks
-chat_scaled = pygame.transform.scale(chat, (260, 200))  # Jutumulli suuruse kohandamine
+seller_scaled = pygame.transform.scale(seller, (256, 305))  # Poemüüja väiksemaks
+chat_scaled = pygame.transform.scale(chat, (255, 210))  # Jutumulli suuruse kohandamine
 
 # Font ja teksti määramine
-font = pygame.font.SysFont("Arial", 24, bold=True)
-text = font.render("Tere, olen Sinu Nimi", True, (255, 255, 255))
+font = pygame.font.SysFont("Arial", 20, bold=False)
+text = font.render("Tere, olen Kermon", True, (255, 255, 255))
 
 # Mängutsükkel
 running = True
 while running:
     screen.blit(bg_shop, (0, 0))  # Tausta lisamine
-    screen.blit(seller_scaled, (50, 320))  # Väiksem poemüüja
-    screen.blit(chat_scaled, (245, 70))  # Väiksem jutumull
-    screen.blit(text, (200, 130))  # Teksti asukoha korrigeerimine
+    screen.blit(seller_scaled, (105, 159))  # Väiksem poemüüja
+    screen.blit(chat_scaled, (246, 60))  # Väiksem jutumull
+    screen.blit(text, (290, 135))  # Teksti asukoha korrigeerimine
 
     # Sündmuste kontroll
     for event in pygame.event.get():
